@@ -16,7 +16,7 @@ binds {
     Mod+Shift+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // Please choose your own file manager.
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    Mod+Shift+Return                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
@@ -94,15 +94,15 @@ binds {
     Mod+8                               { focus-workspace 8; }
     Mod+9                               { focus-workspace 9; }
 
-    Mod+CTRL+1                          { move-column-to-workspace 1; }
-    Mod+CTRL+2                          { move-column-to-workspace 2; }
-    Mod+CTRL+3                          { move-column-to-workspace 3; }
-    Mod+CTRL+4                          { move-column-to-workspace 4; }
-    Mod+CTRL+5                          { move-column-to-workspace 5; }
-    Mod+CTRL+6                          { move-column-to-workspace 6; }
-    Mod+CTRL+7                          { move-column-to-workspace 7; }
-    Mod+CTRL+8                          { move-column-to-workspace 8; }
-    Mod+CTRL+9                          { move-column-to-workspace 9; }
+    Mod+Shift+1                          { move-column-to-workspace 1; }
+    Mod+Shift+2                          { move-column-to-workspace 2; }
+    Mod+Shift+3                          { move-column-to-workspace 3; }
+    Mod+Shift+4                          { move-column-to-workspace 4; }
+    Mod+Shift+5                          { move-column-to-workspace 5; }
+    Mod+Shift+6                          { move-column-to-workspace 6; }
+    Mod+Shift+7                          { move-column-to-workspace 7; }
+    Mod+Shift+8                          { move-column-to-workspace 8; }
+    Mod+Shift+9                          { move-column-to-workspace 9; }
 
     Mod+TAB                             { focus-workspace-previous; }
 
@@ -116,9 +116,12 @@ binds {
     Mod+Shift+Equal                     { set-window-height "+10%"; }
 
     // ─── Modes ───
+    Mod+R                               { switch-preset-column-width; }
+    Mod+F                               { maximize-column; }
+    Mod+Shift+F                         { fullscreen-window; }
     Mod+T                               { toggle-window-floating; }
-    Mod+F                               { fullscreen-window; }
     Mod+W                               { toggle-column-tabbed-display; }
+
 
     // ─── Screenshots ───
     CTRL+Shift+1                        { screenshot; }

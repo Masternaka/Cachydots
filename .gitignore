@@ -1,1 +1,25 @@
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Test directories
+test/
+tmp/
+
+# Claude Code documentation
+CLAUDE.md

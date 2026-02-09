@@ -10,5 +10,12 @@
             proportion 0.66667
         }
 
-        struts {}
+        default-column-width { proportion 0.5; }
+
+        struts {
+            // left 64
+            // right 64
+            // top 64
+            // bottom 64
+        }
     }

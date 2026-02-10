@@ -15,6 +15,11 @@
         honor-xdg-activation-with-invalid-serial
     }
 
+    // Make workspaces four times smaller than normal in the overview.
+    overview {
+        zoom 0.25
+    }
+
     hotkey-overlay {
        skip-at-startup
     }

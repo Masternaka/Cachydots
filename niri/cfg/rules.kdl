@@ -3,7 +3,47 @@
         clip-to-geometry true
     }
 
+    window-rule {
+        match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+        match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+        block-out-from "screen-capture"
+
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
     }
+
+
+    // Set open-maximized to true for all windows.
+    //window-rule {
+    //    open-maximized true
+    //}
+
+    // Then, for Alacritty, set open-maximized back to false.
+    //window-rule {
+    //    match app-id="Alacritty"
+    //    open-maximized false
+    //}
+
+    // You can find the title and the app ID of a window by running niri msg pick-window and clicking on the window in question.
+
+    //window-rule {
+    //    // Match all Telegram windows...
+    //    match app-id="firefox"
+    //
+    //    // ...except the media viewer window.
+    //    //exclude title="^Media viewer$"
+    //
+    //    // Properties to apply.
+    //    open-on-output "HDMI-A-1"
+    //
+    //    default-column-width { fixed 1200; }
+    //}
+
+    // Match windows with title containing "Mozilla Firefox",
+    // or windows with app ID containing "Alacritty".
+    //window-rule {
+    //    match title="Mozilla Firefox"
+    //    match app-id="Alacritty"
+    //}

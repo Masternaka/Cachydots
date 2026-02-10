@@ -33,7 +33,9 @@ binds {
     XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
     // ─── Window Movement and Focus ───
-    Mod+Q                               { close-window; }
+    //Mod+Q                               { close-window; }
+    Mod+Q repeat=false { close-window; }
+    Mod+O repeat=false { toggle-overview; }
 
     Mod+Left                            { focus-column-left; }
     Mod+H                               { focus-column-left; }
@@ -59,14 +61,31 @@ binds {
     Mod+CTRL+End                        { move-column-to-last; }
 
     Mod+Shift+Left                      { focus-monitor-left; }
+    Mod+Shift+H                         { focus-monitor-left; }
     Mod+Shift+Right                     { focus-monitor-right; }
+    Mod+Shift+L                         { focus-monitor-right; }
     Mod+Shift+UP                        { focus-monitor-up; }
+    Mod+Shift+K                         { focus-monitor-up; }
     Mod+Shift+Down                      { focus-monitor-down; }
+    Mod+Shift+J                         { focus-monitor-down; }
 
     Mod+Shift+CTRL+Left                 { move-column-to-monitor-left; }
+    Mod+Shift+CTRL+H                    { move-column-to-monitor-left; }
     Mod+Shift+CTRL+Right                { move-column-to-monitor-right; }
+    Mod+Shift+CTRL+L                    { move-column-to-monitor-right; }
     Mod+Shift+CTRL+UP                   { move-column-to-monitor-up; }
+    Mod+Shift+CTRL+K                    { move-column-to-monitor-up; }
     Mod+Shift+CTRL+Down                 { move-column-to-monitor-down; }
+    Mod+Shift+CTRL+J                    { move-column-to-monitor-down; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+    // ...
+
+    // And you can also move a whole workspace to another monitor:
+    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+    // ...
+
 
     // ─── Workspace Switching ───
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
